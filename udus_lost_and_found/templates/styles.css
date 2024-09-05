@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f2f1; /* Light green background for the page */
+    color: #004d00; /* Dark green text color for general text */
+}
+
+/* Header styles */
+header {
+    background-color: #004d00; /* Dark green background for header */
+    color: white; /* White text color in header */
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navigation styles */
+nav a {
+    color: #cce5cc; /* Light green color for links */
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav a:hover {
+    color: #004d00; /* Dark green on hover */
+}
+
+/* Main content styles */
+.main-content {
+    padding: 20px;
+}
+
+h2 {
+    color: #004d00; /* Dark green color for headings */
+}
+
+/* Form styles */
+form {
+    background-color: white; /* White background for forms */
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #004d00; /* Dark green border for form */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #004d00; /* Dark green border for input fields */
+    border-radius: 5px;
+}
+
+button {
+    background-color: #004d00; /* Dark green button background */
+    color: white; /* White text on button */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003300; /* Even darker green on hover */
+}
+
+/* Footer styles */
+footer {
+    background-color: #004d00; /* Dark green background for footer */
+    color: white; /* White text color in footer */
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

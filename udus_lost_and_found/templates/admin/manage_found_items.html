@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Manage Found Items | Admin Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Manage Found Items</h1>
+        <nav>
+            <a href="admin_dashboard.html">Dashboard</a>
+            <a href="manage_users.html">Manage Users</a>
+            <a href="manage_lost_items.html">Manage Lost Items</a>
+            <a href="manage_found_items.html">Manage Found Items</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="reports.html">Reports</a>
+            <a href="settings.html">System Settings</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <h2>Found Items List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Item Name</th>
+                    <th>Category</th>
+                    <th>Date Found</th>
+                    <th>Location</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+				<tr>
+                    <td>1</td>
+                    <td>Backpack</td>
+                    <td>Personal Belongings</td>
+                    <td>2024-08-25</td>
+                    <td>Student Union</td>
+                    <td>Unclaimed</td>
+                    <td>
+                        <button>Claim</button>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 UDUS Lost and Found. All rights reserved.</p>
+    </footer>
+</body>
+</html>

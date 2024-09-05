@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>System Settings | Admin Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>System Settings</h1>
+        <nav>
+            <a href="admin_dashboard.html">Dashboard</a>
+            <a href="manage_users.html">Manage Users</a>
+            <a href="manage_lost_items.html">Manage Lost Items</a>
+            <a href="manage_found_items.html">Manage Found Items</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="reports.html">Reports</a>
+            <a href="settings.html">System Settings</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <!-- General Settings Section -->
+        <section class="settings-section">
+            <h2>General Settings</h2>
+            <form>
+                <label for="siteName">Site Name:</label>
+                <input type="text" id="siteName" name="siteName" value="UDUS Lost and Found" required>
+
+                <label for="siteEmail">Site Email:</label>
+                <input type="email" id="siteEmail" name="siteEmail" value="support@udus_lost_and_found" required>
+
+                <label for="adminContact">Admin Contact Number:</label>
+                <input type="text" id="adminContact" name="adminContact" value="+2347068584851" required>
+
+                <label for="maintenanceMode">Maintenance Mode:</label>
+                <select id="maintenanceMode" name="maintenanceMode">
+                    <option value="enabled">Enabled</option>
+                    <option value="disabled" selected>Disabled</option>
+                </select>
+
+                <button type="submit">Save General Settings</button>
+            </form>
+        </section>
+
+        <!-- Database Settings Section -->
+        <section class="settings-section">
+            <h2>Database Settings</h2>
+            <form>
+                <label for="dbHost">Database Host:</label>
+                <input type="text" id="dbHost" name="dbHost" value="localhost" required>
+
+                <label for="dbPort">Database Port:</label>
+                <input type="number" id="dbPort" name="dbPort" value="3306" required>
+
+                <label for="dbName">Database Name:</label>
+                <input type="text" id="dbName" name="dbName" value="lost_and_found_db" required>
+
+                <label for="dbUser">Database User:</label>
+                <input type="text" id="dbUser" name="dbUser" value="root" required>
+
+                <label for="dbPassword">Database Password:</label>
+                <input type="password" id="dbPassword" name="dbPassword" required>
+
+                <button type="submit">Update Database Settings</button>
+            </form>
+        </section>
+
+        <!-- Security Settings Section -->
+        <section class="settings-section">
+            <h2>Security Settings</h2>
+            <form>
+                <label for="passwordPolicy">Password Policy:</label>
+                <select id="passwordPolicy" name="passwordPolicy">
+                    <option value="weak">Weak</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="strong">Strong</option>
+                </select>
+
+                <label for="twoFactorAuth">Two-Factor Authentication:</label>
+                <select id="twoFactorAuth" name="twoFactorAuth">
+                    <option value="enabled">Enabled</option>
+                    <option value="disabled" selected>Disabled</option>
+                </select>
+
+                <button type="submit">Save Security Settings</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 UDUS Lost and Found. All rights reserved.</p>
+    </footer>
+</body>
+</html>

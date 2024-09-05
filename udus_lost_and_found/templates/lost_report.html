@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>REPORT LOST ITEM</title>
+</head>
+<body>
+    <header>
+        <h1> Report Lost Item</h1>
+        <nav>
+             <a href="home.html">Home</a>
+            <a href="lost_report.html">Report Lost Item</a>
+            <a href="found_report.html">Report Found Item</a>
+            <a href="view_items.html">View Items</a>
+            <a href="profile.html">Profile</a>
+			<a href="help_page.html">Help</a>
+			<a href="sign_up.html">Sign Up</a>
+			<a href="login.html">Log In</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+	 <p style="text-align:center;">
+		REPORT A LOST ITEM
+		</p>
+		
+        <form>
+            <label for="itemName">Item Name:</label>
+            <input type="text" id="itemName" name="itemName" required>
+
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="dateLost">Date Lost:</label>
+            <input type="date" id="dateLost" name="dateLost" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="contactInfo">Contact Information:</label>
+            <input type="email" id="contactInfo" name="contactInfo" required>
+
+            <label for="uploadImage">Upload Image:</label>
+            <input type="file" id="uploadImage" name="uploadImage">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 UDUS Lost and Found. All rights reserved.</p>
+    </footer>
+</body>
+</html>

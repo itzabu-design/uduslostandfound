@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Reports | Admin Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Reports</h1>
+        <nav>
+            <a href="admin_dashboard.html">Dashboard</a>
+            <a href="manage_users.html">Manage Users</a>
+            <a href="manage_lost_items.html">Manage Lost Items</a>
+            <a href="manage_found_items.html">Manage Found Items</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="reports.html">Reports</a>
+            <a href="settings.html">System Settings</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <h2>Generate Reports</h2>
+        <form>
+            <label for="reportType">Select Report Type:</label>
+            <select id="reportType" name="reportType">
+                <option value="lostItems">Lost Items</option>
+                <option value="foundItems">Found Items</option>
+                <option value="userActivity">User Activity</option>
+                <option value="notifications">Notifications</option>
+            </select>
+
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" name="startDate" required>
+
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" name="endDate" required>
+
+            <button type="submit">Generate Report</button>
+        </form>
+
+        <h2>Report History</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Report ID</th>
+                    <th>Date Generated</th>
+                    <th>Type</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamically populate this table with report data -->
+                <tr>
+                    <td>1</td>
+                    <td>2024-08-25</td>
+                    <td>Lost Items</td>
+                    <td>
+                        <button>View</button>
+                        <button>Download</button>
+                    </td>
+                </tr>
+                <!-- More rows can be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+	<footer>
+      <p>&copy; 2024 UDUS Lost and Found. All rights reserved.</p>
+    </footer>
+</body>
+</html>

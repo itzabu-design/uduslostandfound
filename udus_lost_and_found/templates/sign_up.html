@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign Up | UDUS Lost and Found</title>
+</head>
+<body>
+    <header>
+        <h1>Sign Up</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="lost_report.html">Report Lost Item</a>
+            <a href="found_report.html">Report Found Item</a>
+            <a href="view_items.html">View Items</a>
+            <a href="profile.html">Profile</a>
+            <a href="help_page.html">Help</a>
+			<a href="login.html">Log In</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <p style="text-align:center;">CREATE A NEW ACCOUNT</p>
+        
+        <form method="post" action="{% url 'signup' %}">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password1">Password:</label>
+            <input type="password" id="password1" name="password1" required>
+
+            <label for="password2">Confirm Password:</label>
+            <input type="password" id="password2" name="password2" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 UDUS Lost and Found. All rights reserved.</p>
+    </footer>
+</body>
+</html>
