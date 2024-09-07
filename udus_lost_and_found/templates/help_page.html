@@ -7,7 +7,7 @@
             font-family: Arial, sans-serif;
         }
         .header {
-            background-color: #040750;
+            background-color: #022b0e;
             color: white;
             padding: 20px;
             text-align: center;
@@ -17,7 +17,7 @@
         }
     </style>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'styles.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -30,15 +30,16 @@
         <div class= "header">
         <h1>UDUS Lost and Found Help Center</h1>
         <nav>
-             <a href="home.html">Home</a>
-            <a href="lost_report.html">Report Lost Item</a>
-            <a href="found_report.html">Report Found Item</a>
-            <a href="view_items.html">View Items</a>
-            <a href="profile.html">Profile</a>
-			<a href="help_page.html">Help</a>
-            <a href="/contact">Contact Us</a>
-			<a href="sign_up.html">Sign Up</a>
-			<a href="login.html">Log In</a>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'lost_report' %}">Report Lost Item</a></li>
+                <li><a href="{% url 'found_report' %}">Report Found Item</a></li>
+                <li><a href="{% url 'view_items' %}">View Items</a></li>
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+                <li><a href="{% url 'help_page' %}">Help</a></li>
+                <li><a href="{% url 'sign_up' %}">Sign Up</a></li>
+                <li><a href="{% url 'login' %}">Log In</a></li>
+            </ul>
         </nav>
             <div class="content">
             </div>
