@@ -6,6 +6,15 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 
 
 
+from django.shortcuts import render
+
+def report_lost_item(request):
+    return render(request, 'lost_report.html')
+
+def report_found_item(request):
+    return render(request, 'found_report.html')
+
+
 def home(request):
     return render(request, 'home.html')
 
@@ -45,7 +54,10 @@ def help_view(request):
 
 
 def profile(request):
-        return render(request, 'profile.html'),
+    context = {'user': request.user} 
+    return render(request, 'profile.html', context)
+
+
 def is_admin(user):
     return user.is_staff
 

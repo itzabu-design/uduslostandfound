@@ -12,6 +12,12 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+import django
+from django.core.wsgi import get_wsgi_application
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mylostandfound.settings')
+django.setup()
+application = get_wsgi_application()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR: Path = Path(__file__).resolve().parent.parent
@@ -26,6 +32,8 @@ SECRET_KEY = 'django-insecure-u__a*c936j9a$=dw0zy#n^)sc8pc4-u$3ubwq=2uwac==%#6)z
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False').lower() in ['true', '1']
+DEBUG = False
+
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'udus-lost-and-found.onrender.com']
 
@@ -42,6 +50,7 @@ INSTALLED_APPS = [
     'udus_lost_and_found',
 
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -133,10 +142,11 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
 
-
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
+
+LOGIN_REDIRECT_URL = '/dashboard/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

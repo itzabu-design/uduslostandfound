@@ -1,12 +1,14 @@
 from django.urls import path
 from . import views
 from django.shortcuts import render
+from django.contrib.auth import views as auth_views
+
 
 
 urlpatterns = [
     path('', views.home, name='home'),
     path('sign-up/', views.sign_up, name='sign_up'),
-    path('', views.login, name='login'),
+    path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     path('report-found/', views.found_report, name='found_report'),
     path('report-lost/', views.lost_report, name='lost_report'),
     path('items/', views.view_items, name='view_items'),
@@ -19,6 +21,6 @@ urlpatterns = [
     path('admin/notifications/', views.notifications, name='notifications'),
     path('admin/reports/', views.reports, name='reports'),
     path('profile/', views.profile, name='profile'),
-
-    
+     path('lost-report/', views.lost_report, name='lost_report'),
+    path('found-report/', views.found_report, name='found_report'),
 ]

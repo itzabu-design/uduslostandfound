@@ -1,13 +1,16 @@
+version: 1
 services:
   - type: web
-    name: udus-lost-and-found
+    name: my-django-app
     env: python
-    plan: free
     buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput"
-    startCommand: "gunicorn mylostandfound.wsgi:application"
+    startCommand: "gunicorn mylostandfound.wsgi --bind 0.0.0.0:$PORT"
     envVars:
-      - key: DEBUG
-        value: "False"
-      - key: ALLOWED_HOSTS
-        value: "https://udus-lost-and-found.onrender.com"
-    staticPublishPath: staticfiles
+      - key: DJANGO_SETTINGS_MODULE
+        value: mylostandfound.settings
+      - key: PORT
+        value: "10000"
+    routes:
+      - type: rewrite
+        source: "/static/*"
+        destination: "/static/$1"
