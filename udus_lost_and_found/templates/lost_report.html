@@ -31,6 +31,7 @@
 		</p>
 		
         <form>
+            {% csrf_token %}
             <label for="itemName">Item Name:</label>
             <input type="text" id="itemName" name="itemName" required>
 

@@ -28,6 +28,7 @@
         <p style="text-align:center;">SIGN IN TO YOUR ACCOUNT</p>
         
         <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
             <label for="username">Username or Email:</label>
             <input type="text" id="username" name="username" required>
 
