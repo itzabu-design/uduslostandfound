@@ -1,7 +1,10 @@
 from pathlib import Path
 import os
 from django.core.wsgi import get_wsgi_application
+import environ
 
+env = environ.Env()
+environ.Env.read_env()
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -18,7 +21,7 @@ SECRET_KEY = 'django-insecure-u__a*c936j9a$=dw0zy#n^)sc8pc4-u$3ubwq=2uwac==%#6)z
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'udus-lost-and-found.onrender.com', 'udus-lost-and-found.onrender.com/admin']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'udus-lost-and-found.onrender.com',]
 
 
 # Application definition
@@ -82,6 +85,7 @@ DATABASES = {
 
     }
 }
+
 
 
 
