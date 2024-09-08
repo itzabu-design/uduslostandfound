@@ -1,10 +1,7 @@
 from pathlib import Path
 import os
 from django.core.wsgi import get_wsgi_application
-import environ
 
-env = environ.Env()
-environ.Env.read_env()
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
