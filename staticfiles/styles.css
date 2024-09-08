@@ -41,7 +41,7 @@ h2 {
 /* Form styles */
 form {
     background-color: white; /* White background for forms */
-    padding: 20px;
+    padding: 10px;
     border-radius: 5px;
     border: 1px solid #004d00; /* Dark green border for form */
 }
